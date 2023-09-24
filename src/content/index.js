@@ -38,11 +38,10 @@ if (url.includes('chat.openai.com')) {
     // Volume control
     const volume = await getStorageValuePromise('volume')
 
-    const audio = new Audio('https://cdn.freesound.org/previews/634/634084_11497740-lq.mp3')
+    const audio = new Audio(chrome.runtime.getURL('audio/notification.mp3'))
     audio.volume = volume || 1
 
-    console.log(volume)
-    console.log('Generation done! Volume: ' + volume)
+    console.log('Generation done!')
 
     // Play sound with volume
     audio.currentTime = 0

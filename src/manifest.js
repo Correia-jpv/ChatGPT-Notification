@@ -3,7 +3,7 @@ import { defineManifest } from '@crxjs/vite-plugin'
 export default defineManifest({
   name: 'chatGPT notification',
   description: 'Get a sound notification when a chatGPT generation is done',
-  version: '0.0.2',
+  version: '0.0.3',
   manifest_version: 3,
   icons: {
     16: 'img/logo-16.png',
@@ -34,8 +34,9 @@ export default defineManifest({
         'img/logo-38.png',
         'img/logo-48.png',
         'img/logo-128.png',
+        'audio/notification.mp3',
       ],
-      matches: [],
+      matches: ['<all_urls>'],
     },
   ],
   permissions: ['storage'],
